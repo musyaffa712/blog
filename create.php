@@ -1,3 +1,18 @@
+<?php
+session_start();
+require "functions.php";
+if (isset($_POST["reg"])) {
+    if (reg($_POST) > 0) {
+        echo "<script>
+        alert('userbaru');
+        </script>";
+    } else {
+        echo "<script>
+        alert('gagal');
+        </script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +25,7 @@
 </head>
 
 <body>
-
+    <form action="" method="POST" class=""></form>
 </body>
 
 </html>

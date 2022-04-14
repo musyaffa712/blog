@@ -27,23 +27,70 @@ button:hover {
   transition: 0.5s;
 }
 
-/* If you like this, be sure to ❤️ it. */
+@keyframes in{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+    display: none;
+  }
+}
+.in{
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  background:#ffd194;
+  padding: 10px;
+  border-radius: 20px;
+  animation: in 5s normal forwards;
+}
+.in.salah{
+  color: red;
+}
+.in.benar{
+  color: green;
+}
+.welcome {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
 .wrapper {
   position: absolute;
-  right: 0;
   top: 0;
+}
+.wlog {
+  right: 0;
+}
+.wreg {
+  left: 0;
 }
 
 .wrapper button {
   display: inline-block;
   text-decoration: none;
-  padding: 20px 20px 40px 40px;
   background-color: white;
   color: #585858;
-  border-radius: 0 0 0 100%;
   pointer-events: all;
   border: 0;
   font-size: 18px;
+}
+.wlog button {
+  border-radius: 0 0 0 100%;
+  padding: 20px 20px 40px 40px;
+}
+.wreg button {
+  border-radius: 0 0 100% 0;
+  padding: 20px 40px 40px 20px;
 }
 
 .modal {
@@ -88,10 +135,12 @@ button:hover {
   background: transparent;
 }
 
-.login-form {
+.login-form,
+.register-form {
   text-align: center;
 }
-.login-form h1 {
+.login-form h1,
+.register-form h1 {
   margin-bottom: 25px;
 }
 
@@ -119,6 +168,33 @@ button:hover {
   max-width: 1200px;
   margin-block: 2rem;
   gap: 2rem;
+}
+
+.search {
+  width: 100%;
+  border-radius: 40px;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  justify-items: start;
+}
+.search input {
+  background: white;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 40px 0 0 40px;
+  padding: 0 20px;
+  font-size: 25px;
+}
+.search input::placeholder {
+  font-size: 25px;
+}
+.search button {
+  font-size: 25px;
+  background: #fafafa;
+  width: 10%;
+  border: 1px solid black;
+  border-radius: 0 40px 40px 0;
 }
 
 .card {
@@ -221,4 +297,7 @@ button:hover {
   text-align: center;
   color: white;
   padding-top: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
